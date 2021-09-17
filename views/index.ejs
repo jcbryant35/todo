@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Todo List App</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
+        <script src="https://kit.fontawesome.com/7cf3b9a7d2.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="interface">
+                <header>
+                    <i class="fas fa-sync-alt" id="delAllBtn"></i>
+                    <div id="datebox">
+                          <p id="time">4:20pm</p>
+                          <br>
+                          <p id="date">September 24, 2020</p>  
+                    </div>
+                </header>
+                <div id="userInput">
+                    <form action="/list" method="POST">
+                        <input type="text" class="capitalize" placeholder="Enter item.." name="item" autofocus required> 
+                        <button type="submit" id="addBtn"><i class="fas fa-plus-circle"></i></button>
+                    </form>    
+                </div>
+                <main>
+                    <ul id="list">
+                        <% for(let i = 0; i < list.length; i++) {%>
+                            <span class="saved-list-item">
+                                <li class="list-item">
+                                    <div class="checkbox">                                   
+                                        <span id="circleIcon"><i data-delete="<%= list[i]._id %>" class="far fa-circle uncheck"></i></span>
+                                        <span id="checkIcon"><i class="fas fa-check-circle check"></i></span>
+                                    </div>
+                                    <span class="editText"><%= list[i].item %></span>
+                                    <div class="buttons">
+                                        <button type="submit" data-update="<%= list[i]._id %>" class="saveBtn"><i class="fas fa-check"></i></button>
+                                        <button type="button" onclick="window.location.reload()"class="cancelBtn"><i class="fas fa-times"></i></button>
+                                        <button type="button" data-update="<%= list[i]._id %>" class="editBtn"><i class="fas fa-edit"></i></button>
+                                        <button type="button" data-delete="<%= list[i]._id %>" class="delItemBtn"><i class="fas fa-trash-alt"></i></button>   
+                                    </div>                
+                                </li>  
+                            </span>
+                        <% } %>
+                    </ul> 
+                    <ul id="savedList"></ul>
+                </main>                      
+                <footer>
+                    <p>&#9734; Designed & Developed by: Jason Bryant 2020 &#9734;</p>
+                 </footer>   
+            </div>
+        </div>
+        <script src="javascripts/main.js"></script>
+    </body>
+</html>

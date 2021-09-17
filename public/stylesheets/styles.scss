@@ -1,0 +1,287 @@
+@import 'reset';
+
+// MAIN STYLES
+#wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #interface {
+        height: 100vh;
+        width: 100vw;
+        header {
+            height: 25%;
+            background-image: url('/images/daytime.jpg') ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            #delAllBtn {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                font-size: 25px;
+                color: white;
+            }
+            #datebox {
+                height: 100px;
+                position: relative;
+                top: 45%;
+                left: 2%;
+                #time {
+                    color: white;
+                    font-size: 40px;
+                }
+                #date {
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+        }
+        #userInput {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            height: auto;
+            width: 100%;
+            padding: 5px;
+            border-bottom: 1px solid lightgrey;
+            &::first-letter {
+                text-transform: capitalize;
+            }
+            input {
+                height: 35px;
+                width: 65vw;
+                font-size: 22px;
+                letter-spacing: 1.3px;
+                border-radius: 5px;
+                outline: green;
+            }
+            #addBtn {
+                background: transparent;
+                border: none;
+                font-size: 27px;
+                color: rgb(54, 4, 54);
+                margin-left: 10px;
+                outline: none;
+            }
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 10px;
+                li {
+                    border: 1px solid darkslateblue;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    height: 50px;
+                    list-style-type: none;
+                    padding: 10px;
+                    margin-top: 10px;
+                    border-radius: 15px;
+                    .checkbox {
+                        position: absolute;
+                        left: 5%;
+                        font-size: 25px;
+                        .check {
+                            display: none;
+                            color: green;
+                        }
+                    }
+                    .buttons {
+                        display: flex;
+                        justify-content: space-evenly;
+                        flex-direction: row;
+                        width: 17%; 
+                        height: 28px;
+                        position: absolute;
+                        right: 5%; 
+                        .editBtn {
+                            font-size: 20px;
+                            background: transparent;
+                            border: none;
+                            outline: none; 
+                        }
+                        .delItemBtn {
+                            font-size: 20px;
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                        }
+                        .saveBtn, .cancelBtn {
+                            display: none;
+                            background: transparent;
+                            outline: none;
+                            border: none;
+                            font-size: 25px;
+                        }
+                        .cancelBtn {
+                            color: red;
+                        }
+                        .saveBtn {
+                            color: green;
+                        }
+                    }
+                    .editedText {
+                        height: 30px;
+                        width: 90%;
+                        font-size: 20px;
+                        outline: none;
+
+                    }
+                }
+                .editText {
+                    font-size: 20px;
+                    letter-spacing: 1.5px;
+                    &:first-letter {
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        footer {
+            background-image: url('/images/nightpic.jpg');
+            height: 5%;
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                color: white;
+                font-size: 4vw;
+            }
+        }
+    }
+}
+
+
+
+// Responsive Media Queries for large screens 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #wrapper {
+        #interface {
+            border-radius: 15px;
+            height: 100vh;
+            width: 30vw;
+            margin: 15px;
+            header {
+                height: 30%;
+                border-top: 2px solid black;
+                border-left: 2px solid black;
+                border-right: 2px solid black;
+                border-radius: 15px 15px 0px 0px;
+                box-shadow: 0px 0px 15px 0px black;
+                position: relative;
+                #delAllBtn {
+                   position: absolute;
+                    right: 5%;
+                    top: 6%;
+                    font-size: 25px;
+                    color: white;
+                    &:hover {
+                        cursor: pointer;
+                        color: rgb(92, 60, 92);
+                    }
+                }
+            }
+            #userInput {
+                border-right: 2px solid black;
+                border-left: 2px solid black;
+                box-shadow: 0px 0px 5px 0px black;
+                input {
+                    height: 35px;
+                    width: 25vw;
+                    font-size: 22px;
+                    letter-spacing: 1.3px;
+                    border-radius: 5px;
+                    outline: green;
+                }
+                #addBtn {
+                    color: rgb(54, 4, 54);
+                    opacity: 0.5;
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.9;
+                    }
+                }
+            }
+    
+            main {
+                border-right: 2px solid black;
+                border-left: 2px solid black;
+                box-shadow: 0px 0px 15px 0px black;
+                ul {
+                    margin-top: 25px;
+                    li {
+                        .checkbox {
+                            left: 37%;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                        .buttons {
+                            width: 8%; 
+                            position: absolute;
+                            right: 35%; 
+                            .editBtn {
+                                &:hover {
+                                    cursor: pointer;
+                                    color: rgb(243, 220, 12);
+                                }
+                            }
+                            .delItemBtn {
+                                &:hover {
+                                    color: rgb(221, 3, 3);
+                                    cursor: pointer;
+                                }
+                            }
+                            .cancelBtn {
+                                &:hover {
+                                    cursor: pointer;
+                                    opacity: 0.6;
+                                }
+                            }
+                            .saveBtn {
+                                &:hover {
+                                    cursor: pointer;
+                                    opacity: 0.6;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            footer {
+                border-bottom: 2px solid black;
+                border-right: 2px solid black;
+                border-left: 2px solid black;
+                border-radius: 0px 0px 15px 15px;
+                box-shadow: 0px 0px 30px 0px black;
+                p {
+                    font-size: 2vh;
+                }
+            }
+            .clearStorage {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,350 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper #interface {
+  height: 100vh;
+  width: 100vw;
+}
+
+#wrapper #interface header {
+  height: 25%;
+  background-image: url("/images/daytime.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#wrapper #interface header #delAllBtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 25px;
+  color: white;
+}
+
+#wrapper #interface header #datebox {
+  height: 100px;
+  position: relative;
+  top: 45%;
+  left: 2%;
+}
+
+#wrapper #interface header #datebox #time {
+  color: white;
+  font-size: 40px;
+}
+
+#wrapper #interface header #datebox #date {
+  color: white;
+  font-size: 20px;
+}
+
+#wrapper #interface #userInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: auto;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid lightgrey;
+}
+
+#wrapper #interface #userInput::first-letter {
+  text-transform: capitalize;
+}
+
+#wrapper #interface #userInput input {
+  height: 35px;
+  width: 65vw;
+  font-size: 22px;
+  letter-spacing: 1.3px;
+  border-radius: 5px;
+  outline: green;
+}
+
+#wrapper #interface #userInput #addBtn {
+  background: transparent;
+  border: none;
+  font-size: 27px;
+  color: #360436;
+  margin-left: 10px;
+  outline: none;
+}
+
+#wrapper #interface main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#wrapper #interface main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+#wrapper #interface main ul li {
+  border: 1px solid darkslateblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50px;
+  list-style-type: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+#wrapper #interface main ul li .checkbox {
+  position: absolute;
+  left: 5%;
+  font-size: 25px;
+}
+
+#wrapper #interface main ul li .checkbox .check {
+  display: none;
+  color: green;
+}
+
+#wrapper #interface main ul li .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 17%;
+  height: 28px;
+  position: absolute;
+  right: 5%;
+}
+
+#wrapper #interface main ul li .buttons .editBtn {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+#wrapper #interface main ul li .buttons .delItemBtn {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+#wrapper #interface main ul li .buttons .saveBtn, #wrapper #interface main ul li .buttons .cancelBtn {
+  display: none;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 25px;
+}
+
+#wrapper #interface main ul li .buttons .cancelBtn {
+  color: red;
+}
+
+#wrapper #interface main ul li .buttons .saveBtn {
+  color: green;
+}
+
+#wrapper #interface main ul li .editedText {
+  height: 30px;
+  width: 90%;
+  font-size: 20px;
+  outline: none;
+}
+
+#wrapper #interface main ul .editText {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+#wrapper #interface main ul .editText:first-letter {
+  text-transform: capitalize;
+}
+
+#wrapper #interface footer {
+  background-image: url("/images/nightpic.jpg");
+  height: 5%;
+  width: 100%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper #interface footer p {
+  color: white;
+  font-size: 4vw;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #wrapper #interface {
+    border-radius: 15px;
+    height: 100vh;
+    width: 30vw;
+    margin: 15px;
+  }
+  #wrapper #interface header {
+    height: 30%;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 15px 15px 0px 0px;
+    -webkit-box-shadow: 0px 0px 15px 0px black;
+            box-shadow: 0px 0px 15px 0px black;
+    position: relative;
+  }
+  #wrapper #interface header #delAllBtn {
+    position: absolute;
+    right: 5%;
+    top: 6%;
+    font-size: 25px;
+    color: white;
+  }
+  #wrapper #interface header #delAllBtn:hover {
+    cursor: pointer;
+    color: #5c3c5c;
+  }
+  #wrapper #interface #userInput {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    -webkit-box-shadow: 0px 0px 5px 0px black;
+            box-shadow: 0px 0px 5px 0px black;
+  }
+  #wrapper #interface #userInput input {
+    height: 35px;
+    width: 25vw;
+    font-size: 22px;
+    letter-spacing: 1.3px;
+    border-radius: 5px;
+    outline: green;
+  }
+  #wrapper #interface #userInput #addBtn {
+    color: #360436;
+    opacity: 0.5;
+  }
+  #wrapper #interface #userInput #addBtn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  #wrapper #interface main {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    -webkit-box-shadow: 0px 0px 15px 0px black;
+            box-shadow: 0px 0px 15px 0px black;
+  }
+  #wrapper #interface main ul {
+    margin-top: 25px;
+  }
+  #wrapper #interface main ul li .checkbox {
+    left: 37%;
+  }
+  #wrapper #interface main ul li .checkbox:hover {
+    cursor: pointer;
+  }
+  #wrapper #interface main ul li .buttons {
+    width: 8%;
+    position: absolute;
+    right: 35%;
+  }
+  #wrapper #interface main ul li .buttons .editBtn:hover {
+    cursor: pointer;
+    color: #f3dc0c;
+  }
+  #wrapper #interface main ul li .buttons .delItemBtn:hover {
+    color: #dd0303;
+    cursor: pointer;
+  }
+  #wrapper #interface main ul li .buttons .cancelBtn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  #wrapper #interface main ul li .buttons .saveBtn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  #wrapper #interface footer {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-radius: 0px 0px 15px 15px;
+    -webkit-box-shadow: 0px 0px 30px 0px black;
+            box-shadow: 0px 0px 30px 0px black;
+  }
+  #wrapper #interface footer p {
+    font-size: 2vh;
+  }
+  #wrapper #interface .clearStorage:hover {
+    cursor: pointer;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
