@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
-//const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 const dbUrl = process.env.DATABASE_URL;
@@ -25,7 +25,6 @@ MongoClient.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, 
 
     // MIDDLEWARES
     app.set('view engine', 'ejs');
-    app.set('views', path.join(__dirname, './views'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true} ));
     app.use(express.static('public'));
