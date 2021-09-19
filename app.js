@@ -31,7 +31,7 @@ MongoClient.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, 
 
 
     //READ ROUTE
-    app.get('/', (req, res) => {
+    app.get('https://damp-forest-54342.herokuapp.com/', (req, res) => {
         dbCollection.find().toArray()
         .then(results => {
             res.render('index.ejs', { list: results })
