@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 const dbUrl = process.env.DATABASE_URL;
