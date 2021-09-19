@@ -25,13 +25,14 @@ MongoClient.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, 
 
     // MIDDLEWARES
     app.set('view engine', 'ejs');
+    app.set('views', path.join(__dirname, './views'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true} ));
     app.use(express.static('public'));
 
 
     //READ ROUTE
-    app.get('https://damp-forest-54342.herokuapp.com/', (req, res) => {
+    app.get('/', (req, res) => {
         dbCollection.find().toArray()
         .then(results => {
             res.render('index.ejs', { list: results })
